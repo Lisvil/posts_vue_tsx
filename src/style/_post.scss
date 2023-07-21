@@ -1,0 +1,52 @@
+.post {
+  border-radius: 10px;
+  box-shadow: 0 0 10px #b9b9b9b5;
+  width: 50%;
+  min-width: 600px;
+  padding: 10px 20px;
+  background: $post-color;
+  background: #fff;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  @media(max-width: 682px) {
+    min-width: 90%;
+  }
+}
+.post__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.post__author,
+.post__date{
+  font-weight: bold;
+  font-style: italic;
+  font-size: 15px;
+  color: $post-info-color;
+}
+
+.post__title {
+  margin: 10px 0;
+}
+.post__text {
+  color: $post-text;
+  padding-bottom: 10px;
+}
+.post__footer {
+  text-align: right;
+  padding-top: 10px;
+}
+.post__button {
+  padding: 10px 15px;
+  border-radius: 7px;
+  background-color: #3cad6dfd;
+  border: 1px solid #3cad6dfd;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: darken($color: #3cad6dfd, $amount: 10);
+  }
+}

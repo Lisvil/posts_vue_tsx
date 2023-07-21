@@ -1,0 +1,33 @@
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.user__name {
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.user__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end
+}
+.user__button,
+.user__button-add {
+  button {
+    @extend %button;
+  }
+}
+.user__button-add {
+  margin-right: 20px;
+  button {
+    background: #fff;
+    color: $main-color;
+    border-color: $main-color;
+    &:hover {
+      background-color: darken($main-color, 10);
+      color: #fff;
+    }
+  }
+}

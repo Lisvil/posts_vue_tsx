@@ -1,0 +1,69 @@
+@import 'vars';
+@import 'extends';
+@import 'post';
+@import 'form';
+@import 'user';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  background: #f7f7f7;
+}
+.header {
+  padding: 20px 50px;
+  @media(max-width: 470px) {
+    padding: 5%;
+  }
+}
+.user__buttons {
+  text-align: right;
+}
+.user__buttons-button {
+  @extend %button;
+  margin-right: 20px;
+
+}
+.user__buttons-button + .user__buttons-button {
+  background-color: #fff;
+  color: $main-color;
+  &:hover {
+    background-color: darken($color: $main-color, $amount: 10);
+    color: #fff;
+  }
+}
+.posts {
+  padding: 2% 5%;
+}
+.registration,
+.authorization {
+  height: 100vh;
+  padding: 3% 5%;
+}
+.back_button {
+  font-weight: bold;
+  font-size: 20px;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  span {
+    display: block;
+    width: max-content;
+    transform: rotateY(180deg);
+    padding: 0 0px 5px 5px;
+  }
+}
+.registration__container,
+.authorization__container {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
